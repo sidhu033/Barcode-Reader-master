@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BluetoothScan">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.InstructionActivity">
+
+                        <!--product id-->
+        <LinearLayout
+            android:id="@+id/ll_product_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_product_id_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp20"
+                android:text="@string/your_product_id_is"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/tv_product_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp20"
+                android:text="product ID"
+                android:layout_weight="1"
+                android:textColor="@color/red"
+                android:gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_lefthand_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_product_id"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_lefthand_id_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp20"
+                android:text="LEFT HAND DEVICE ID:"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/tv_left_hand_device_selected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/left_hand_device_id"
+                android:fontFamily="@font/metropolisregular"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/red"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_righthand_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_lefthand_id"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_righthand_id_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp20"
+                android:text="RIGH HAND DEVICE ID"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/tv_right_hand_device_selected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/right_hand_device_id"
+                android:fontFamily="@font/metropolisregular"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/red"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+
+        <!--device select-->
+
+        <TextView
+            android:id="@+id/txtlhd"
+            android:layout_below="@+id/ll_righthand_id"
+            android:text="@string/selectdevice"
+            android:padding="@dimen/dp10"
+            android:fontFamily="@font/metropolisregular"
+            android:textSize="@dimen/sp15"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/device_select_spinner"
+            android:layout_below="@+id/txtlhd"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/ll_device_select"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/device_select_spinner"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_assign_lefthand"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp150"
+                android:text="@string/assign_to_left_hand"
+                android:layout_marginLeft="@dimen/dp20"
+                android:textSize="15sp"
+                android:background="@color/yellow"
+                />
+
+
+
+            <Button
+                android:id="@+id/btn_assign_righhand"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp150"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="@string/assign_to_righ_hand"
+                android:textSize="15sp"
+                android:background="@color/yellow"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <!--add product button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="5dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_add_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:text="@string/add_product"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/dp10"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight="1"
+                android:text="@string/reset"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
